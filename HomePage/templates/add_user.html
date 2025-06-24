@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block blockname %}
+
+
+<style>
+    .fulldiv {
+        padding: 5% 10%;
+    }
+
+    .fulldiv2 {
+        background-color: rgb(117, 135, 151);
+        border-radius: 15px;
+    }
+
+    .fulldiv2 h1 {
+        text-align: center;
+        color: white;
+        padding-top: 3%;
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    .allinputdiv form .user-detials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .allinputdiv form .user-detials .input-box {
+        position: relative;
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 35px;
+    }
+
+    .user-detials .input-box input {
+        height: 60px;
+        width: 30vw;
+        padding: 0.5em;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+       
+    }
+
+    .user-detials .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        background-color: white;
+        padding: 0 5px;
+        transition: 0.3s;
+        pointer-events: none;
+        font-size: 20px;
+    }
+
+    .user-detials .input-box input:focus + label,
+    .user-detials .input-box input:not(:placeholder-shown) + label {
+        top: -20px;
+        left: 5px;
+        font-size: 1.10em;
+        color: #333; 
+        font-weight: 600;
+    }
+
+    .buttondiv{
+        text-align: center;
+        padding: 15px 30px;
+        
+    }
+
+    .buttondiv button{ 
+        
+        padding: 10px 100px;
+        font-size: 25px;
+        border: none;
+        background-color: rgb(65, 80, 94);
+        color: white;
+        font-weight: 600;
+        border-radius: 40px;
+    }
+</style>
+
+<section>
+    <div class="fulldiv">
+        <div class="fulldiv2">
+            <h1>User Data</h1>
+            <div class="p-5 allinputdiv">
+                <form action="">
+                    <div class="user-detials">
+                        <div class="input-box">
+                            <input type="text" id="firstname" placeholder=" " >
+                            <label for="firstname">First Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="lastname" placeholder=" " >
+                            <label for="lastname">Last Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="fathername" placeholder=" " >
+                            <label for="fathername">Father Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="mothername" placeholder=" " >
+                            <label for="mothername">Mother Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="totalmember" placeholder=" " >
+                            <label for="totalmember">Total Family Member</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="bith" placeholder=" ">
+                            <label for="bith">Date of Birth</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="nidcard" placeholder=" ">
+                            <label for="nidcard">NID/Birth Id Number</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="phonenumber" placeholder=" ">
+                            <label for="phonenumber">Phone Number</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="address" placeholder=" ">
+                            <label for="address">Address</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="Work" placeholder=" ">
+                            <label for="Work">Work</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="Marital" placeholder=" ">
+                            <label for="Marital">Marital status</label>
+                        </div>
+                    </div>
+                    <div class="buttondiv">
+                        
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock blockname %}

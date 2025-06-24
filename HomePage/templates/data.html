@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block blockname %}
+        
+
+<style>
+.datafulldiv{
+    padding: 5% 25%;
+
+}
+
+
+.datafulldiv p{
+    font-size: 24px;
+    color: white;
+    padding-left: 3%;
+  
+    
+
+}
+
+.datafulldiv span{
+    font-size: 24px;
+    color: white;
+    padding-left: 6%;
+  
+    
+
+}
+
+
+.seconddiv{
+    background-color: rgb(31, 45, 58);
+    padding-bottom: 5%;
+    border-radius: 15px;
+}
+
+.wrcode h1{
+    color: white;
+    padding: 4% 0%; 
+    text-align: center;
+    
+}
+
+.wrcode {
+    text-align: center;
+    
+}
+
+.pdiv{
+    padding-top: 5%;
+    padding-left: 3%;
+}
+
+
+</style>
+
+
+<section>
+    <div class="datafulldiv">
+        <div class="seconddiv">
+            <div class="wrcode">
+                <h1> User All Data </h1>
+                <img src="{{ user.qr_code.url }}" alt="QR Code"  class=" h-25 w-25">
+            </div>
+            <div class="pdiv">
+            <p>First Name : <span>{{ user.First_Name }} </span></p>
+            <p>Last Name : <span> {{ user.Last_Name }} </span></p>
+            <p>Father Name : <span>{{ user.Father_Name }}</span></p>
+            <p>Mother Name  : <span>{{ user.Mother_Name }}</span></p>
+            <p>Family Member : <span>{{ user.Total_family_mamber }}</span></p>
+            <p>Date Of Birth : <span>{{ user.Data_of_birth }}</span></p>
+            <p>NID/Birth Id : <span>{{ user.Nid_card_number }}</span></p>
+            <p>Phone Number : <span>{{ user.phone_number }}</span></p>
+            <p>Meritial Status<span></span></p>
+            <p>Work<span></span></p>
+            <p>Salary<span></span></p>
+            <p>Prize <span></span></p>
+            <p>Work Post<span></span></p>
+            <p><span></span></p>
+            <p><span></span></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock blockname %}

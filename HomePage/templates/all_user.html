@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block blockname %}
+        
+
+
+
+<style>
+    .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+       
+    }
+    
+    .content-table thead tr {
+        background-color: #0a1110;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+        font-size: 25px;
+        padding-top: 15px;
+       
+    }
+    
+    .content-table th,
+    .content-table td {
+        padding: 12px 15px;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+    }
+    
+    .content-table tbody tr {
+        border-bottom: 2px solid #ffffff;
+        background-color: #011f4b;
+    }
+    
+.contractform h1{
+    font-size: 55px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.paginations{
+    padding-bottom: 5%;
+}
+    
+.page-link{
+    font-size: 25px;
+    color: #000000;
+    font-weight: 500;
+}
+.read-more{
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contractformfulldiv{
+    padding: 3% 5%;
+    
+}
+
+.tdtable{
+    color: white;
+    text-decoration: none;
+}
+
+
+</style>
+
+
+
+<div class="contractformfulldiv">
+    <div>
+        <table class="content-table w-100">
+            <thead>
+                <tr>
+                    <th><h4>Full Name</h4></th>
+                    <th><h4>Father Name</h4></th>
+                    <th><h4>Mother Name</h4></th>
+                    <th><h4>NID/Birth Id</h4></th>
+                    <th><h4>Phone Number</h4></th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in user_all %}
+            <tr>
+                <td> <a href="{% url 'user_detail' i.pk %}"  class="tdtable">  {{i.First_Name}} {{i.Last_Name}}</a> </td>
+                <td> <a href="{% url 'user_detail' i.pk %}"  class="tdtable">  {{i.Father_Name}}</a> </td>
+                <td> <a href="{% url 'user_detail' i.pk %}"  class="tdtable">  {{i.Mother_Name}}</a> </td>
+                <td> <a href="{% url 'user_detail' i.pk %}"  class="tdtable">  {{i.Nid_card_number}}</a> </td>
+                <td> <a href="{% url 'user_detail' i.pk %}"  class="tdtable">  {{i.phone_number}}</a> </td>
+                
+                
+            </tr>
+            {% endfor %}
+                
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock blockname %}
